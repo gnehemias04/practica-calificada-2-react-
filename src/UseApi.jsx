@@ -7,7 +7,7 @@ export default function Api(props) {
   useEffect(() => {
     axios
       .get(
-        `https://api.unsplash.com/search/photos?query=${props.search}}&per_page=12&client_id=SNnldJFusk5eaN0cXx3EHqbNv02XmjIYQxF2doboi_Q`
+        `https://api.unsplash.com/search/photos?query=perros&per_page=12&client_id=SNnldJFusk5eaN0cXx3EHqbNv02XmjIYQxF2doboi_Q`
       )
       .then((res) => setImg(res.data.results));
   }, []);
