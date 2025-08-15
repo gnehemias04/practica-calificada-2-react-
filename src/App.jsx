@@ -1,14 +1,25 @@
+import { useState } from "react";
 import Footer from "./components/footer";
 import Header from "./components/header";
 import Main from "./components/main";
 import Api from "./UseApi";
 
 function App() {
-  const img = Api();
+  const [search, setSearch] = useState("");
+  const [categories, setCategories] = useState("animales");
+  const [img, setImg] = useState([]);
+  console.log(categories);
+  console.log(search);
   return (
     <>
       <div className="w-full h-full">
-        <Header />
+        <Api search={search || categories} setImg={setImg} />
+        <Header
+          search={search}
+          setSearch={setSearch}
+          categories={categories}
+          setCategories={setCategories}
+        />
         <Main array={img} />
         <Footer />
       </div>

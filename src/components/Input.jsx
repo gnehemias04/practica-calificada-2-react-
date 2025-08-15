@@ -2,7 +2,13 @@ export default function Input(props) {
   return (
     <>
       <div className="flex border rounded-r-2xl ">
-        <input className="" type="text" placeholder="busqueda de imagenes" />
+        <input
+          value={props.search}
+          onChange={(e) => props.setSearch(e.target.value)}
+          className=""
+          type="text"
+          placeholder="busqueda de imagenes"
+        />
         <svg
           className="w-6 h-6 text-gray-800 dark:text-white bg-gray-300 rounded-r-2xl"
           aria-hidden="true"
