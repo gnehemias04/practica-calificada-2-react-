@@ -6,7 +6,7 @@ export default function Api(props) {
     const image = props.search || "perro";
     axios
       .get(
-        `https://api.unsplash.com/search/photos?query=${image}&per_page=12&client_id=SNnldJFusk5eaN0cXx3EHqbNv02XmjIYQxF2doboi_Q`
+        `https://api.unsplash.com/search/photos?query=${image}&per_page=20&client_id=SNnldJFusk5eaN0cXx3EHqbNv02XmjIYQxF2doboi_Q`
       )
       .then((res) => props.setImg(res.data.results));
   }, [props.search]);

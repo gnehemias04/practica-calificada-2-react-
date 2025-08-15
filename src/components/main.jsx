@@ -2,9 +2,9 @@ export default function Main(props) {
   return (
     <>
       <section className="w-full h-full flex justify-center items-center">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4  w-[90%] gap-4 p-4 ">
-          {props.array.length > 0 ? (
-            props.array.map((e) => (
+        {props.array.length > 0 ? (
+          props.array.map((e) => (
+            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5  w-[90%] gap-4 p-4 ">
               <div className=" p-1 rounded-sm bg-black/50 relative">
                 <img
                   className="h-full w-full object-cover"
@@ -17,11 +17,18 @@ export default function Main(props) {
                   <p className="text-center">{e.alt_description}</p>
                 </div>
               </div>
-            ))
-          ) : (
+            </div>
+          ))
+        ) : (
+          <div className="w-full h-full col-span-5 flex flex-col justify-center items-center">
+            <img
+              className="w-full h-full"
+              src="https://i.pinimg.com/originals/1d/69/6f/1d696f941d33a44dad5dd921c9a29215.gif"
+              alt=""
+            />
             <p>Cargando...</p>
-          )}
-        </div>
+          </div>
+        )}
       </section>
     </>
   );

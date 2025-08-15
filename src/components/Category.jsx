@@ -2,13 +2,7 @@ import { useState } from "react";
 export default function Category(props) {
   return (
     <>
-      <div className="w-full bg-blue-400 flex justify-around py-1">
-        <button
-          type=""
-          className="border-1 border-black rounded-lg bg-blue-900 px-2 text-white"
-        >
-          Aleatorio
-        </button>
+      <div className="w-full bg-blue-400 flex justify-center py-1">
         <select
           value={props.categories}
           onChange={(e) => props.setCategories(e.target.value)}
